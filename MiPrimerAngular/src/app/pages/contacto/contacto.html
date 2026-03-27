@@ -2,52 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Contacto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .contenedor {
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Formulario</title>
 </head>
 <body>
 
-<div class="contenedor">
-    <h2>Contacto</h2>
+    <h2>Formulario de Registro</h2>
+
     <form action="#" method="post">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu correo" required>
-        <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+
+        <!-- Nombre completo -->
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <!-- Número de identificación -->
+        <label for="identificacion">Número de identificación:</label><br>
+        <input type="number" id="identificacion" name="identificacion" required><br><br>
+
+        <!-- Fecha de nacimiento -->
+        <label for="fecha">Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <!-- Estado civil -->
+        <label>Estado civil:</label><br>
+        <input type="radio" id="soltero" name="estado_civil" value="soltero" required>
+        <label for="soltero">Soltero</label><br>
+
+        <input type="radio" id="casado" name="estado_civil" value="casado">
+        <label for="casado">Casado</label><br><br>
+
+        <!-- Política de datos -->
+        <input type="checkbox" id="politica" name="politica" required>
+        <label for="politica">Acepto la política de tratamiento de datos</label><br><br>
+
+        <!-- Botón -->
         <button type="submit">Enviar</button>
+
     </form>
-</div>
 
 </body>
 </html>
